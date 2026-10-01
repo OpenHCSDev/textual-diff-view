@@ -27,6 +27,7 @@ from textual.visual import Visual, RenderOptions
 from textual.widget import Widget
 from textual.widgets import Static
 from textual import containers
+from textual._measurement import INDEPENDENT_HEIGHT, height_dependency
 
 from textual._loop import loop_last
 
@@ -273,9 +274,11 @@ class LineAnnotations(Widget):
     def total_width(self) -> int:
         return self.number_width
 
+    @height_dependency(INDEPENDENT_HEIGHT)
     def get_content_width(self, container: Size, viewport: Size) -> int:
         return self.total_width
 
+    @height_dependency(INDEPENDENT_HEIGHT)
     def get_content_height(self, container: Size, viewport: Size, width: int) -> int:
         return len(self.numbers)
 
