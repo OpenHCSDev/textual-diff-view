@@ -257,7 +257,7 @@ class LineAnnotations(Widget):
         height: auto;                
     }
     """
-    numbers: reactive[list[Content]] = reactive(list)
+    numbers: reactive[list[Content]] = reactive(list, layout=True)
 
     def __init__(
         self,
