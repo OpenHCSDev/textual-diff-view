@@ -55,3 +55,10 @@ pipeline. The first Region.from_size attempt failed because this native API
 has no such method; no compatibility/fallback was added. Corrected03 uses the
 native Region constructor and same declared shrink operation as Widget.
 No provider/public mutation/replay, no new flags/cache/coordinator.
+
+Installed basic consumer control on the normal current69-package pair also
+passes automatic/prepared/fixed/padded resize behavior and0 mount-induced
+arrangements (27 total, not a performance comparison to earlier24). Full source
+trust/imports/native593/pipcheck pass through Toad271. Original41MB physical
+entrypoint remains pending valid477 post-carry route; library/source checkpoint
+must not be described as full user performance or live installation readiness.

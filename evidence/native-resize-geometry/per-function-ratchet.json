@@ -1,0 +1,13 @@
+{
+  "all_functions_no_growth": true,
+  "changed_handler": {
+    "boolean_chain_terms": 0,
+    "foreign_absence_probe": 0,
+    "string_dispatch": 0,
+    "type_switch": 0,
+    "string_dispatch_arms": 0,
+    "type_switch_arms": 0
+  },
+  "removed_handler": "on_mount",
+  "boundary": "Geometry Resize data and declared Widget styles; difflib opcode taxonomy elsewhere unchanged"
+}
