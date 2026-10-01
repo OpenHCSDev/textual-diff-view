@@ -938,10 +938,10 @@ class DiffView(containers.VerticalGroup):
             self.split = width >= split_width
 
     async def on_resize(self, event: events.Resize) -> None:
+        # Resize supplies the width committed by native layout. Querying size
+        # during Mount forces a full scene arrangement while its tree is still
+        # attaching; the initial layout already delivers this same Resize.
         self._check_auto_split(event.size.width)
-
-    async def on_mount(self) -> None:
-        self._check_auto_split(self.size.width)
 
     def compose_unified(self) -> ComposeResult:
         """Compose unified view."""
