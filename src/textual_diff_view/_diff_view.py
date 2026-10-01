@@ -14,7 +14,7 @@ from rich.style import Style as RichStyle
 
 from textual.app import ComposeResult
 from textual.content import Content, Span
-from textual.geometry import Size
+from textual.geometry import Region, Size
 from textual import highlight
 from textual import events
 
@@ -938,10 +938,13 @@ class DiffView(containers.VerticalGroup):
             self.split = width >= split_width
 
     async def on_resize(self, event: events.Resize) -> None:
-        self._check_auto_split(event.size.width)
-
-    async def on_mount(self) -> None:
-        self._check_auto_split(self.size.width)
+        # Resize supplies the width committed by native layout. Querying size
+        # during Mount forces a full scene arrangement while its tree is still
+        # attaching; the initial layout already delivers this same Resize.
+        self._check_auto_split(
+            Region(0, 0, event.size.width, event.size.height)
+            .shrink(self.styles.gutter).width
+        )
 
     def compose_unified(self) -> ComposeResult:
         """Compose unified view."""
