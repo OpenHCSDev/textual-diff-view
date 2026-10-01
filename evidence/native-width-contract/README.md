@@ -23,3 +23,9 @@ Textual25added22deleted, nativeDiff4added1deleted, Toad2method declaration lines
 Unknown subclasses continue ContextHeight. Full original scope stays271. Source
 control uses ownsource imports in unchanged installed pair; immutable affected
 installed and physical41MB/CPU/warm A/B proof are pending, not source READY.
+
+
+Installed69 native control exits0, all10 originaldiff/toolflow resources1each,
+source number mutation3x1→9x6 plus relative/style/member/unknownwidth/hooks/
+resize pass. Exact pairedsource and originalRED preserved. Scoped nativeconsumer
+checkpoint only; not original41MB physical/currentagentwarm/wholeCPUReady.
