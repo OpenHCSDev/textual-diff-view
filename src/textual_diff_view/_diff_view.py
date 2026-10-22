@@ -28,6 +28,7 @@ from textual.widget import Widget
 from textual.widgets import Static
 from textual import containers
 from textual._measurement import INDEPENDENT_HEIGHT, height_dependency
+from textual._paint_state import PaintState
 
 from textual._loop import loop_last
 
@@ -286,10 +287,10 @@ class LineAnnotations(Widget):
     def number_width(self) -> int:
         return max(number.cell_length for number in self.numbers) if self.numbers else 0
 
-    def render_line(self, y: int) -> Strip:
+    def render_line(self, y: int, paint: PaintState) -> Strip:
         width = self.total_width
-        visual_style = self.visual_style
-        rich_style = visual_style.rich_style
+        visual_style = paint.visual_style
+        rich_style = paint.rich_style
         try:
             number = self.numbers[y]
         except IndexError:
